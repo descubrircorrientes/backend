@@ -1,0 +1,13 @@
+###
+POST http://127.0.0.1:9000/api/historia HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "EL APORTE DE LA ARQUEOLOGIA"
+}
+
+###
+GET http://127.0.0.1:9000/api/historia HTTP/1.1
+
+###
+GET http://127.0.0.1:9000/api/historia/6287d200720c47b2f24fadc8 HTTP/1.1
