@@ -5,10 +5,11 @@ const app = express();
 
 const historyRoutes = require("./src/routes/historyRoutes");
 const categoriesRoutes = require("./src/routes/categoriesRoutes");
-
+const cors = require('cors');
 const port = process.env.PORT || 8000;
 
 //middleware
+app.use(cors())
 app.use(express.json())
 app.use(historyRoutes);
 app.use(categoriesRoutes);
@@ -17,6 +18,7 @@ app.use(categoriesRoutes);
 
 // routes
 app.get('/', (req, res) => {
+    res.set('Access-Control-Allow-Origin', 'http://localhost:4200')
     res.send('Works')
 });
 
