@@ -1,14 +1,18 @@
 const express = require('express');
-const mongoose = require('mongoose')
-require("dotenv").config()
-const app = express()
-const historyRouteS = require("./src/routes/historyRoutes")
+const mongoose = require('mongoose');
+require("dotenv").config();
+const app = express();
+
+const historyRoutes = require("./src/routes/historyRoutes");
+const categoriesRoutes = require("./src/routes/categoriesRoutes");
 
 const port = process.env.PORT || 9000;
 
 //middleware
 app.use(express.json())
-app.use('/api', historyRouteS);
+app.use('/api', historyRoutes);
+app.use('/api', categoriesRoutes);
+
 
 
 // routes

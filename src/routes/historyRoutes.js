@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const historyModel = require("../models/historyTitle");
+const historyModel = require("../models/history/historyTitle");
 
 //create article
 router.post('/historia', (req, res) => {
