@@ -6,12 +6,12 @@ const app = express();
 const historyRoutes = require("./src/routes/historyRoutes");
 const categoriesRoutes = require("./src/routes/categoriesRoutes");
 
-const port = process.env.PORT || 9000;
+const port = process.env.PORT || 8000;
 
 //middleware
 app.use(express.json())
-app.use('/api', historyRoutes);
-app.use('/api', categoriesRoutes);
+app.use(historyRoutes);
+app.use(categoriesRoutes);
 
 
 
