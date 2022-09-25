@@ -5,6 +5,8 @@ const app = express();
 
 const historyRoutes = require("./src/routes/historyRoutes");
 const categoriesRoutes = require("./src/routes/categoriesRoutes");
+const subCategoriesRoutes = require("./src/routes/subcategoriesRoutes");
+
 const cors = require('cors');
 const port = process.env.PORT || 8000;
 
@@ -13,7 +15,7 @@ app.use(cors())
 app.use(express.json())
 app.use(historyRoutes);
 app.use(categoriesRoutes);
-
+app.use(subCategoriesRoutes);
 
 
 // routes
