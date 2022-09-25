@@ -37,3 +37,19 @@ Content-Type: application/json
 
 ###
 GET http://localhost:8000/subcategory HTTP/1.1
+
+
+
+###
+POST http://localhost:8000/articles HTTP/1.1
+Content-Type: application/json
+
+{
+    "subcategory": "Subcategoria de Musica",
+    "category": "Musica",
+    "text": "Este es el texto",
+    "images": "Esto es una imagen"
+}
+
+###
+GET http://localhost:8000/articles HTTP/1.1

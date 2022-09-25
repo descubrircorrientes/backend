@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 require("dotenv").config();
 const app = express();
 
+const articleRoute = require("./src/routes/articleRoute");
 const historyRoutes = require("./src/routes/historyRoutes");
 const categoriesRoutes = require("./src/routes/categoriesRoutes");
 const subCategoriesRoutes = require("./src/routes/subcategoriesRoutes");
@@ -16,7 +17,7 @@ app.use(express.json())
 app.use(historyRoutes);
 app.use(categoriesRoutes);
 app.use(subCategoriesRoutes);
-
+app.use(articleRoute);
 
 // routes
 app.get('/', (req, res) => {
