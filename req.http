@@ -32,7 +32,8 @@ Content-Type: application/json
 
 {
     "title": "Subcategoria de Musica",
-    "category": "Musica"
+    "category": "Musica",
+    "secondSubcategory": "secondSubcategory" 
 }
 
 ###
