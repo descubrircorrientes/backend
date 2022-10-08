@@ -6,7 +6,8 @@ const articleModel = mongoose.Schema({
     secondsubcategory: String,
     title: String,
     text: String,
-    images: String
+    images: String,
+    id: String
 });
 
 module.exports = mongoose.model('Article', articleModel);

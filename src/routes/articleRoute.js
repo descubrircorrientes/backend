@@ -22,5 +22,14 @@ articleRoute.get('/articles', (req, res) => {
                 }));
 });
 
+articleRoute.get('/articles/:id', (req, res) => {
+    const { id } = req.params;
+    articleModel.findById(id)
+                .then((data) => res.json(data))
+                .catch(() => res.json({
+                    mmessage: error
+                }));
+});
+
 
 module.exports = articleRoute;
