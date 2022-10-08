@@ -33,11 +33,24 @@ Content-Type: application/json
 {
     "title": "Subcategoria de Musica",
     "category": "Musica",
-    "secondSubcategory": "secondSubcategory" 
+    "secondSubcategory": "Musisca" 
 }
 
 ###
 GET http://localhost:8000/subcategory HTTP/1.1
+
+###
+POST http://localhost:8000/secondsubcategory HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Segunda Subcategoria de Musica",
+    "category": "Musica",
+    "subcategory": "Musisca" 
+}
+
+###
+GET http://localhost:8000/secondsubcategory HTTP/1.1
 
 
 
@@ -48,6 +61,8 @@ Content-Type: application/json
 {
     "subcategory": "Subcategoria de Musica",
     "category": "Musica",
+    "secondsubcategory": "Second Subcategoria de Musica",
+    "title": "title de musica",
     "text": "Este es el texto",
     "images": "Esto es una imagen"
 }
