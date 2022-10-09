@@ -62,9 +62,12 @@ Content-Type: application/json
     "category": "Musica",
     "secondsubcategory": "Second Subcategoria de Musica",
     "title": "title de musica",
-    "text": "Este es el texto",
+    "text": {
+        "title": "primer titulo",
+        "paragraph": "primer parrafo"
+    },
     "images": "Esto es una imagen"
 }
 
 ###
-GET http://localhost:8000/articles/6341bdb94c738df96097edcd HTTP/1.1
+GET http://localhost:8000/articles/634345e228bf228179441c6d HTTP/1.1

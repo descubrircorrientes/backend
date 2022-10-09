@@ -5,7 +5,10 @@ const articleModel = mongoose.Schema({
     subcategory: String,
     secondsubcategory: String,
     title: String,
-    text: String,
+    text: {
+        title: String,
+        paragraph: String
+        },
     images: String,
     id: String
 });
